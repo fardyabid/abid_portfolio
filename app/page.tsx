@@ -4,16 +4,20 @@ import Portfolio from '@/components/Portfolio'
 import About from '@/components/About'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
+import { getArtworks } from '@/lib/artworks'
 
-export default function Home() {
+export default async function Home() {
+  const artworks = getArtworks()
+
   return (
     <main className="min-h-screen bg-background">
       <Header />
       <Hero />
-      <Portfolio />
+      <Portfolio initialArtworks={artworks} />
       <About />
       <Contact />
       <Footer />
     </main>
   )
 }
+

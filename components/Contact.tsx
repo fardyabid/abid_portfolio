@@ -117,12 +117,12 @@ export default function Contact() {
           <div className="text-center p-8 rounded-3xl bg-card/30 backdrop-blur-sm border border-white/5 hover:border-primary/30 transition-all duration-500 hover:-translate-y-2 group">
             <div className="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg">📧</div>
             <h3 className="text-xl font-bold text-foreground mb-3">ইমেইল</h3>
-            <p className="text-muted-foreground group-hover:text-primary transition-colors duration-300">abid.hussain@art.bd</p>
+            <p className="text-muted-foreground group-hover:text-primary transition-colors duration-300">abid.hussain@gmail.com</p>
           </div>
           <div className="text-center p-8 rounded-3xl bg-card/30 backdrop-blur-sm border border-white/5 hover:border-accent/30 transition-all duration-500 hover:-translate-y-2 group">
             <div className="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg">📱</div>
             <h3 className="text-xl font-bold text-foreground mb-3">ফোন</h3>
-            <p className="text-muted-foreground group-hover:text-accent transition-colors duration-300">+880 1234 567890</p>
+            <p className="text-muted-foreground group-hover:text-accent transition-colors duration-300">+880 1716122475</p>
           </div>
           <div className="text-center p-8 rounded-3xl bg-card/30 backdrop-blur-sm border border-white/5 hover:border-primary/30 transition-all duration-500 hover:-translate-y-2 group">
             <div className="text-4xl mb-6 group-hover:scale-110 transition-transform duration-300 drop-shadow-lg">📍</div>

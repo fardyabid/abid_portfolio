@@ -18,43 +18,7 @@ export default function Footer() {
             </div>
           </div>
 
-          <div>
-            <h4 className="font-semibold text-lg mb-6 text-foreground tracking-wide">দ্রুত লিঙ্ক</h4>
-            <ul className="space-y-4">
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm font-medium">হোম</a></li>
-              <li><a href="#portfolio" className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm font-medium">পোর্টফোলিও</a></li>
-              <li><a href="#about" className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm font-medium">পরিচয়</a></li>
-              <li><a href="#contact" className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm font-medium">যোগাযোগ</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold text-lg mb-6 text-foreground tracking-wide">সেবা</h4>
-            <ul className="space-y-4">
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm font-medium">কাস্টম ডিজাইন</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm font-medium">প্রকল্প পরামর্শ</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm font-medium">শিল্প প্রশিক্ষণ</a></li>
-              <li><a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300 text-sm font-medium">ফ্রিল্যান্স কাজ</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-semibold text-lg mb-6 text-foreground tracking-wide">সংযোগ</h4>
-            <ul className="space-y-5">
-              <li className="text-muted-foreground text-sm font-medium group">
-                <span className="block text-primary/70 text-xs mb-1 uppercase tracking-wider">ইমেইল</span>
-                <span className="group-hover:text-primary transition-colors duration-300">abid.hussain@art.bd</span>
-              </li>
-              <li className="text-muted-foreground text-sm font-medium group">
-                <span className="block text-primary/70 text-xs mb-1 uppercase tracking-wider">ফোন</span>
-                <span className="group-hover:text-primary transition-colors duration-300">+880 1234 567890</span>
-              </li>
-              <li className="text-muted-foreground text-sm font-medium group">
-                <span className="block text-primary/70 text-xs mb-1 uppercase tracking-wider">অবস্থান</span>
-                <span className="group-hover:text-primary transition-colors duration-300">ঢাকা, বাংলাদেশ</span>
-              </li>
-            </ul>
-          </div>
+  
         </div>
 
         <div className="border-t border-white/5 pt-8 mt-4">
@@ -63,9 +27,7 @@ export default function Footer() {
               © ২০২৬ আবিদ হোসেইন। সর্বাধিকার সংরক্ষিত।
             </p>
             <div className="flex gap-8 text-sm font-medium">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300">গোপনীয়তা নীতি</a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300">শর্তাবলী</a>
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors duration-300">কুকিজ</a>
+             
             </div>
           </div>
         </div>

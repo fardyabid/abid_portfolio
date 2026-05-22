@@ -14,21 +14,8 @@ export const metadata: Metadata = {
   description: 'আবিদ হোসেইনের ৩D টেক্সচার্ড ল্যান্ডস্কেপ পেইন্টিং পোর্টফোলিও। অনন্য শিল্পকর্ম এবং সৃজনশীল ডিজাইন।',
   generator: 'v0.app',
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: '/images/paint-brush.png',
+    apple: '/images/paint-brush.png',
   },
 }
 

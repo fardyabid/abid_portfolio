@@ -2,37 +2,21 @@
 
 import { useState } from 'react'
 import Image from 'next/image'
+import { Artwork } from '@/lib/artworks'
 
-const imageFiles = [
-  "FB_IMG_1777997631223.jpg", "FB_IMG_1777997639514.jpg", "FB_IMG_1777997645595.jpg", "FB_IMG_1777997657004.jpg", 
-  "FB_IMG_1777997666537.jpg", "FB_IMG_1777997678415.jpg", "FB_IMG_1777997699473.jpg", "FB_IMG_1777997701526.jpg", 
-  "FB_IMG_1777997712083.jpg", "FB_IMG_1777997733661.jpg", "FB_IMG_1777997742423.jpg", "FB_IMG_1777997760839.jpg", 
-  "FB_IMG_1777997763803.jpg", "FB_IMG_1777997766357.jpg", "FB_IMG_1777997768696.jpg", "FB_IMG_1777997770920.jpg", 
-  "FB_IMG_1777997773042.jpg", "FB_IMG_1777997775482.jpg", "FB_IMG_1777997778635.jpg", "FB_IMG_1777997781157.jpg", 
-  "FB_IMG_1777997784326.jpg", "IMG_20260505_220439774_HDR.jpg", "IMG_20260505_220502735_HDR.jpg", "IMG_20260505_220531832_HDR.jpg", 
-  "IMG_20260505_220617389_HDR.jpg", "IMG_20260505_220626489_HDR.jpg", "IMG_20260505_220645361_HDR.jpg", "IMG_20260505_220707242_HDR.jpg", 
-  "IMG_20260505_220748249_HDR.jpg", "IMG_20260505_220819678_HDR.jpg", "IMG_20260505_220828177_HDR.jpg", "IMG_20260505_220841204_HDR.jpg", 
-  "IMG_20260505_220853608.jpg", "IMG_20260505_220900549_HDR.jpg", "IMG_20260505_220911300_HDR.jpg", "IMG_20260505_220923267_HDR.jpg", 
-  "IMG_20260505_220937329_HDR.jpg"
-];
-
-const categoriesList = ['ল্যান্ডস্কেপ', 'প্রকৃতি', 'আকাশ', 'বিমূর্ত'];
-
-const artworks = imageFiles.map((filename, index) => ({
-  id: index + 1,
-  title: `শিল্পকর্ম ${index + 1}`,
-  category: categoriesList[index % categoriesList.length],
-  image: `/images/${filename}`
-}));
-
-export default function Portfolio() {
+export default function Portfolio({ initialArtworks }: { initialArtworks: Artwork[] }) {
   const [selectedCategory, setSelectedCategory] = useState<string>('সব')
-  const [selectedArtwork, setSelectedArtwork] = useState<null | (typeof artworks)[0]>(null)
+  const [selectedArtwork, setSelectedArtwork] = useState<null | Artwork>(null)
 
+  // Dynamically compile categories based on actual artworks, seeding defaults
+  const defaultCategories = ['ল্যান্ডস্কেপ', 'প্রকৃতি', 'আকাশ', 'বিমূর্ত']
+  const uniqueCategories = Array.from(new Set(initialArtworks.map(art => art.category).filter(Boolean)))
+  const categoriesList = Array.from(new Set([...defaultCategories, ...uniqueCategories]))
   const categories = ['সব', ...categoriesList]
+
   const filteredArtworks = selectedCategory === 'সব'
-    ? artworks
-    : artworks.filter(art => art.category === selectedCategory)
+    ? initialArtworks
+    : initialArtworks.filter(art => art.category === selectedCategory)
 
   return (
     <section id="portfolio" className="py-28 px-4 bg-background">
@@ -65,7 +49,7 @@ export default function Portfolio() {
 
         {/* Masonry Grid Layout */}
         <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-6 space-y-6">
-          {filteredArtworks.map(artwork => (
+          {filteredArtworks.map((artwork, index) => (
             <div
               key={artwork.id}
               onClick={() => setSelectedArtwork(artwork)}
@@ -73,7 +57,7 @@ export default function Portfolio() {
               className="group cursor-pointer rounded-2xl overflow-hidden bg-card border border-border/50 hover:border-primary/50 shadow-sm hover:shadow-[0_8px_30px_rgb(0,0,0,0.5)] transition-all duration-500 relative"
             >
               {/* Dynamic Aspect Ratio simulation for Masonry using default object-cover */}
-              <div className={`relative w-full overflow-hidden ${artwork.id % 3 === 0 ? 'aspect-[3/4]' : artwork.id % 2 === 0 ? 'aspect-[4/3]' : 'aspect-square'} bg-muted`}>
+              <div className={`relative w-full overflow-hidden ${index % 3 === 0 ? 'aspect-[3/4]' : index % 2 === 0 ? 'aspect-[4/3]' : 'aspect-square'} bg-muted`}>
                 <Image
                   src={artwork.image}
                   alt={artwork.title}
@@ -121,9 +105,14 @@ export default function Portfolio() {
                   className="object-contain drop-shadow-2xl"
                 />
               </div>
-              <div className="mt-6 text-center">
+              <div className="mt-6 text-center max-w-2xl px-4">
                 <h4 className="font-bold text-2xl text-white tracking-wide">{selectedArtwork.title}</h4>
-                <p className="text-primary font-medium mt-2">{selectedArtwork.category}</p>
+                <p className="text-primary font-medium mt-1 text-sm">{selectedArtwork.category}</p>
+                {selectedArtwork.description && (
+                  <p className="text-muted-foreground mt-3 text-sm md:text-base font-light leading-relaxed max-w-lg mx-auto">
+                    {selectedArtwork.description}
+                  </p>
+                )}
               </div>
             </div>
           </div>
