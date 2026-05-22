@@ -71,6 +71,11 @@ export async function getArtworks(): Promise<Artwork[]> {
 export async function saveArtworks(artworks: Artwork[]): Promise<void> {
   // If KV is not configured, write to local JSON file
   if (!process.env.KV_REST_API_URL) {
+    const isVercel = process.env.VERCEL === '1' || process.env.NODE_ENV === 'production';
+    if (isVercel) {
+      throw new Error('Vercel KV (Redis) database is not connected to your project. Please connect it in your Vercel Dashboard and trigger a Redeploy.');
+    }
+
     try {
       const dataDir = path.dirname(localFilePath);
       if (!fs.existsSync(dataDir)) {

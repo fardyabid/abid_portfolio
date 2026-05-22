@@ -56,6 +56,15 @@ export async function uploadArtworkAction(formData: FormData) {
       console.log(`Server Action [uploadArtworkAction]: Uploaded successfully. URL: ${blob.url}`);
       imageUrl = blob.url;
     } else {
+      // Check if we are running in production / serverless environment
+      const isVercel = process.env.VERCEL === '1' || process.env.NODE_ENV === 'production';
+      if (isVercel) {
+        return { 
+          success: false, 
+          error: 'Vercel Blob Storage is not connected to your project. Please go to your Vercel Dashboard -> Storage, connect your Blob Store to this project, and trigger a Redeploy.' 
+        };
+      }
+
       // Fallback: Save locally during dev
       console.log(`Server Action [uploadArtworkAction]: BLOB_READ_WRITE_TOKEN is missing. Falling back to local filesystem storage.`);
       imageUrl = await saveUploadedFileLocally(photo);
