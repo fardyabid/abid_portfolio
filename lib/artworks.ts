@@ -1,4 +1,6 @@
 import { kv } from '@vercel/kv'
+import fs from 'fs'
+import path from 'path'
 
 export interface Artwork {
   id: string;
@@ -35,7 +37,23 @@ function seedData(): Artwork[] {
   }));
 }
 
+const localFilePath = path.join(process.cwd(), 'data', 'artworks.json');
+
 export async function getArtworks(): Promise<Artwork[]> {
+  // If KV is not configured, fall back to local JSON file
+  if (!process.env.KV_REST_API_URL) {
+    try {
+      if (fs.existsSync(localFilePath)) {
+        const fileContent = await fs.promises.readFile(localFilePath, 'utf8');
+        return JSON.parse(fileContent);
+      }
+    } catch (e) {
+      console.error('Error reading local artworks file:', e);
+    }
+    return seedData();
+  }
+
+  // Use Vercel KV when configured
   try {
     let artworks = await kv.get<Artwork[]>('artworks');
     if (!artworks || artworks.length === 0) {
@@ -46,12 +64,27 @@ export async function getArtworks(): Promise<Artwork[]> {
     return artworks;
   } catch (error) {
     console.error('Error reading artworks from Vercel KV:', error);
-    // Fall back to seed data if KV REST settings are not configured yet (e.g. local preview)
     return seedData();
   }
 }
 
 export async function saveArtworks(artworks: Artwork[]): Promise<void> {
+  // If KV is not configured, write to local JSON file
+  if (!process.env.KV_REST_API_URL) {
+    try {
+      const dataDir = path.dirname(localFilePath);
+      if (!fs.existsSync(dataDir)) {
+        fs.mkdirSync(dataDir, { recursive: true });
+      }
+      await fs.promises.writeFile(localFilePath, JSON.stringify(artworks, null, 2), 'utf8');
+      return;
+    } catch (e) {
+      console.error('Error saving artworks to local file:', e);
+      throw e;
+    }
+  }
+
+  // Use Vercel KV when configured
   try {
     await kv.set('artworks', artworks);
   } catch (error) {
