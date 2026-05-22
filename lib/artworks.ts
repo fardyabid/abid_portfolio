@@ -1,5 +1,4 @@
-import fs from 'fs'
-import path from 'path'
+import { kv } from '@vercel/kv'
 
 export interface Artwork {
   id: string;
@@ -9,8 +8,6 @@ export interface Artwork {
   image: string;
   createdAt: string;
 }
-
-const dbPath = path.join(process.cwd(), 'data', 'artworks.json');
 
 const imageFiles = [
   "FB_IMG_1777997631223.jpg", "FB_IMG_1777997639514.jpg", "FB_IMG_1777997645595.jpg", "FB_IMG_1777997657004.jpg", 
@@ -38,29 +35,27 @@ function seedData(): Artwork[] {
   }));
 }
 
-export function getArtworks(): Artwork[] {
-  if (!fs.existsSync(dbPath)) {
-    const dir = path.dirname(dbPath);
-    if (!fs.existsSync(dir)) {
-      fs.mkdirSync(dir, { recursive: true });
-    }
-    const initialData = seedData();
-    fs.writeFileSync(dbPath, JSON.stringify(initialData, null, 2), 'utf-8');
-    return initialData;
-  }
+export async function getArtworks(): Promise<Artwork[]> {
   try {
-    const data = fs.readFileSync(dbPath, 'utf-8');
-    return JSON.parse(data);
+    let artworks = await kv.get<Artwork[]>('artworks');
+    if (!artworks || artworks.length === 0) {
+      console.log('No artworks found in Vercel KV, seeding initial dataset...');
+      artworks = seedData();
+      await kv.set('artworks', artworks);
+    }
+    return artworks;
   } catch (error) {
-    console.error('Error reading artworks JSON:', error);
+    console.error('Error reading artworks from Vercel KV:', error);
+    // Fall back to seed data if KV REST settings are not configured yet (e.g. local preview)
     return seedData();
   }
 }
 
-export function saveArtworks(artworks: Artwork[]): void {
-  const dir = path.dirname(dbPath);
-  if (!fs.existsSync(dir)) {
-    fs.mkdirSync(dir, { recursive: true });
+export async function saveArtworks(artworks: Artwork[]): Promise<void> {
+  try {
+    await kv.set('artworks', artworks);
+  } catch (error) {
+    console.error('Error saving artworks to Vercel KV:', error);
+    throw error;
   }
-  fs.writeFileSync(dbPath, JSON.stringify(artworks, null, 2), 'utf-8');
 }

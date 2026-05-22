@@ -7,7 +7,7 @@ import Footer from '@/components/Footer'
 import { getArtworks } from '@/lib/artworks'
 
 export default async function Home() {
-  const artworks = getArtworks()
+  const artworks = await getArtworks()
 
   return (
     <main className="min-h-screen bg-background">

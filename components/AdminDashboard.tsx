@@ -379,7 +379,7 @@ export default function AdminDashboard({ initialArtworks }: { initialArtworks: A
                         <span className="bg-primary/10 text-primary border border-primary/20 px-2 py-0.5 rounded text-[11px] font-semibold">
                           {item.category}
                         </span>
-                        {item.image.startsWith('/uploads/') && (
+                        {!item.image.startsWith('/images/') && (
                           <span className="bg-emerald-600/10 text-emerald-400 border border-emerald-500/20 px-2 py-0.5 rounded text-[10px] font-medium">
                             আপলোডেড
                           </span>

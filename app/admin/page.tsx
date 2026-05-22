@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 export const dynamic = 'force-dynamic'
 
 export default async function AdminPage() {
-  const artworks = getArtworks()
+  const artworks = await getArtworks()
 
   return (
     <main className="min-h-screen bg-background">
