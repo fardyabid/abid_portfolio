@@ -1,18 +1,18 @@
 import type { Metadata } from 'next'
-import { Noto_Sans_Bengali } from 'next/font/google'
+import { Lato } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 
-const notoSansBengali = Noto_Sans_Bengali({ 
-  subsets: ["bengali", "latin"],
-  weight: ['300', '400', '500', '600', '700', '800'],
-  variable: '--font-sans'
+const lato = Lato({ 
+  subsets: ["latin"],
+  weight: ['300', '400', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-lato'
 });
 
 export const metadata: Metadata = {
-  title: 'আবিদ হোসেইন - ৩D ল্যান্ডস্কেপ আর্টিস্ট',
-  description: 'আবিদ হোসেইনের ৩D টেক্সচার্ড ল্যান্ডস্কেপ পেইন্টিং পোর্টফোলিও। অনন্য শিল্পকর্ম এবং সৃজনশীল ডিজাইন।',
-  generator: 'v0.app',
+  title: 'Abid Hossain | 3D Landscape Artist & Sculptural Painter',
+  description: 'Portfolio of Abid Hossain, a 3D Landscape Artist and Sculptural Relief Painter based in Dhaka, Bangladesh. Specializing in textured impasto paintings and nature art.',
   icons: {
     icon: '/images/paint-brush.png',
     apple: '/images/paint-brush.png',
@@ -25,8 +25,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="bn" className="dark">
-      <body className={`${notoSansBengali.variable} font-sans antialiased text-foreground bg-background`}>
+    <html lang="en">
+      <body className={`${lato.variable} font-sans antialiased text-[#222222] bg-white`}>
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

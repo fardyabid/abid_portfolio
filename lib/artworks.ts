@@ -11,29 +11,65 @@ export interface Artwork {
   createdAt: string;
 }
 
-const imageFiles = [
-  "FB_IMG_1777997631223.jpg", "FB_IMG_1777997639514.jpg", "FB_IMG_1777997645595.jpg", "FB_IMG_1777997657004.jpg", 
-  "FB_IMG_1777997666537.jpg", "FB_IMG_1777997678415.jpg", "FB_IMG_1777997699473.jpg", "FB_IMG_1777997701526.jpg", 
-  "FB_IMG_1777997712083.jpg", "FB_IMG_1777997733661.jpg", "FB_IMG_1777997742423.jpg", "FB_IMG_1777997760839.jpg", 
-  "FB_IMG_1777997763803.jpg", "FB_IMG_1777997766357.jpg", "FB_IMG_1777997768696.jpg", "FB_IMG_1777997770920.jpg", 
-  "FB_IMG_1777997773042.jpg", "FB_IMG_1777997775482.jpg", "FB_IMG_1777997778635.jpg", "FB_IMG_1777997781157.jpg", 
-  "FB_IMG_1777997784326.jpg", "IMG_20260505_220439774_HDR.jpg", "IMG_20260505_220502735_HDR.jpg", "IMG_20260505_220531832_HDR.jpg", 
-  "IMG_20260505_220617389_HDR.jpg", "IMG_20260505_220626489_HDR.jpg", "IMG_20260505_220645361_HDR.jpg", "IMG_20260505_220707242_HDR.jpg", 
-  "IMG_20260505_220748249_HDR.jpg", "IMG_20260505_220819678_HDR.jpg", "IMG_20260505_220828177_HDR.jpg", "IMG_20260505_220841204_HDR.jpg", 
-  "IMG_20260505_220853608.jpg", "IMG_20260505_220900549_HDR.jpg", "IMG_20260505_220911300_HDR.jpg", "IMG_20260505_220923267_HDR.jpg", 
-  "IMG_20260505_220937329_HDR.jpg"
+const artworkSeeds: { title: string; desc: string; category: string; file: string }[] = [
+  {
+    title: "Mountain Peak Reverie (3D Relief)",
+    desc: "Heavy impasto textural landscape depicting rugged Himalayan ridges with layered marble dust paste, cobalt shadows, and warm gold sunrise glazes.",
+    category: "Landscape",
+    file: "IMG_20260505_220531832_HDR.jpg"
+  },
+  {
+    title: "Riverbank Twilight Serenade",
+    desc: "Multi-layered water vistas featuring gentle river ripples and atmospheric twilight reflections sculpted with translucent acrylic glazes.",
+    category: "Nature & Forests",
+    file: "FB_IMG_1777997631223.jpg"
+  },
+  {
+    title: "Golden Horizon Sunset",
+    desc: "Warm amber, terracotta, and crimson sunset gradients capturing the atmospheric glow over rolling delta horizons with sculpted cloud formations.",
+    category: "Sky & Twilight",
+    file: "FB_IMG_1777997645595.jpg"
+  },
+  {
+    title: "Chromatic Dimensions & Abstract Form",
+    desc: "Intersecting geometric waves and organic texture peaks created through knife carving, plaster layering, and subtle metallic undertones.",
+    category: "Abstract & Relief",
+    file: "FB_IMG_1777997657004.jpg"
+  },
+  {
+    title: "Alpine Solitude in Winter",
+    desc: "Snow-capped crystalline crags sculpted with heavy stucco paste, titanium white peaks, and deep ultramarine crevasse shadows.",
+    category: "Landscape",
+    file: "FB_IMG_1777997666537.jpg"
+  },
+  {
+    title: "Verdant Woodland Sanctuary",
+    desc: "Tactile forest canopy rendered with deep emerald greens, raw umber bark reliefs, and textured moss layers that react dynamically to ambient lighting.",
+    category: "Nature & Forests",
+    file: "FB_IMG_1777997678415.jpg"
+  },
+  {
+    title: "Celestial Starry Nightscape",
+    desc: "Swirling midnight blue galaxies, starry constellations, and glowing lunar textures sculpted with dimensional paste and iridescent mineral highlights.",
+    category: "Sky & Twilight",
+    file: "FB_IMG_1777997699473.jpg"
+  },
+  {
+    title: "Terra & Geological Strata",
+    desc: "Tactile exploration of natural stone formations and soil textures created with fine silica sand, raw pigment washes, and sculpted structural paste.",
+    category: "Abstract & Relief",
+    file: "IMG_20260505_220617389_HDR.jpg"
+  }
 ];
 
-const categoriesList = ['ল্যান্ডস্কেপ', 'প্রকৃতি', 'আকাশ', 'বিমূর্ত'];
-
 function seedData(): Artwork[] {
-  return imageFiles.map((filename, index) => ({
-    id: `seed-${index + 1}`,
-    title: `শিল্পকর্ম ${index + 1}`,
-    description: "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    category: categoriesList[index % categoriesList.length],
-    image: `/images/${filename}`,
-    createdAt: new Date(Date.now() - (37 - index) * 24 * 60 * 60 * 1000).toISOString()
+  return artworkSeeds.map((item, index) => ({
+    id: `art-${index + 1}`,
+    title: item.title,
+    description: item.desc,
+    category: item.category,
+    image: `/images/${item.file}`,
+    createdAt: new Date(Date.now() - (artworkSeeds.length - index) * 24 * 60 * 60 * 1000).toISOString()
   }));
 }
 
@@ -45,7 +81,10 @@ export async function getArtworks(): Promise<Artwork[]> {
     try {
       if (fs.existsSync(localFilePath)) {
         const fileContent = await fs.promises.readFile(localFilePath, 'utf8');
-        return JSON.parse(fileContent);
+        const parsed = JSON.parse(fileContent);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          return parsed;
+        }
       }
     } catch (e) {
       console.error('Error reading local artworks file:', e);

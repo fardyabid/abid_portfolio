@@ -1,290 +1,66 @@
 [
   {
-    "id": "seed-1",
-    "title": "শিল্পকর্ম 1",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "ল্যান্ডস্কেপ",
-    "image": "/images/FB_IMG_1777997631223.jpg",
+    "id": "art-1",
+    "title": "Mountain Peak Reverie (3D Relief)",
+    "description": "Heavy impasto textural landscape depicting rugged Himalayan ridges with layered marble dust paste, cobalt shadows, and warm gold sunrise glazes.",
+    "category": "Landscape",
+    "image": "/images/IMG_20260505_220531832_HDR.jpg",
     "createdAt": "2026-04-15T09:58:58.964Z"
   },
   {
-    "id": "seed-3",
-    "title": "শিল্পকর্ম 3",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "আকাশ",
-    "image": "/images/FB_IMG_1777997645595.jpg",
+    "id": "art-2",
+    "title": "Riverbank Twilight Serenade",
+    "description": "Multi-layered water vistas featuring gentle river ripples and atmospheric twilight reflections sculpted with translucent acrylic glazes.",
+    "category": "Nature & Forests",
+    "image": "/images/FB_IMG_1777997631223.jpg",
     "createdAt": "2026-04-17T09:58:58.965Z"
   },
   {
-    "id": "seed-4",
-    "title": "শিল্পকর্ম 4",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "বিমূর্ত",
-    "image": "/images/FB_IMG_1777997657004.jpg",
+    "id": "art-3",
+    "title": "Golden Horizon Sunset",
+    "description": "Warm amber, terracotta, and crimson sunset gradients capturing the atmospheric glow over rolling delta horizons with sculpted cloud formations.",
+    "category": "Sky & Twilight",
+    "image": "/images/FB_IMG_1777997645595.jpg",
     "createdAt": "2026-04-18T09:58:58.965Z"
   },
   {
-    "id": "seed-5",
-    "title": "শিল্পকর্ম 5",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "ল্যান্ডস্কেপ",
-    "image": "/images/FB_IMG_1777997666537.jpg",
+    "id": "art-4",
+    "title": "Chromatic Dimensions & Abstract Form",
+    "description": "Intersecting geometric waves and organic texture peaks created through knife carving, plaster layering, and subtle metallic undertones.",
+    "category": "Abstract & Relief",
+    "image": "/images/FB_IMG_1777997657004.jpg",
     "createdAt": "2026-04-19T09:58:58.965Z"
   },
   {
-    "id": "seed-6",
-    "title": "শিল্পকর্ম 6",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "প্রকৃতি",
-    "image": "/images/FB_IMG_1777997678415.jpg",
+    "id": "art-5",
+    "title": "Alpine Solitude in Winter",
+    "description": "Snow-capped crystalline crags sculpted with heavy stucco paste, titanium white peaks, and deep ultramarine crevasse shadows.",
+    "category": "Landscape",
+    "image": "/images/FB_IMG_1777997666537.jpg",
     "createdAt": "2026-04-20T09:58:58.965Z"
   },
   {
-    "id": "seed-7",
-    "title": "শিল্পকর্ম 7",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "আকাশ",
-    "image": "/images/FB_IMG_1777997699473.jpg",
+    "id": "art-6",
+    "title": "Verdant Woodland Sanctuary",
+    "description": "Tactile forest canopy rendered with deep emerald greens, raw umber bark reliefs, and textured moss layers that react dynamically to ambient lighting.",
+    "category": "Nature & Forests",
+    "image": "/images/FB_IMG_1777997678415.jpg",
     "createdAt": "2026-04-21T09:58:58.965Z"
   },
   {
-    "id": "seed-8",
-    "title": "শিল্পকর্ম 8",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "বিমূর্ত",
-    "image": "/images/FB_IMG_1777997701526.jpg",
+    "id": "art-7",
+    "title": "Celestial Starry Nightscape",
+    "description": "Swirling midnight blue galaxies, starry constellations, and glowing lunar textures sculpted with dimensional paste and iridescent mineral highlights.",
+    "category": "Sky & Twilight",
+    "image": "/images/FB_IMG_1777997699473.jpg",
     "createdAt": "2026-04-22T09:58:58.965Z"
   },
   {
-    "id": "seed-9",
-    "title": "শিল্পকর্ম 9",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "ল্যান্ডস্কেপ",
-    "image": "/images/FB_IMG_1777997712083.jpg",
-    "createdAt": "2026-04-23T09:58:58.965Z"
-  },
-  {
-    "id": "seed-10",
-    "title": "শিল্পকর্ম 10",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "প্রকৃতি",
-    "image": "/images/FB_IMG_1777997733661.jpg",
-    "createdAt": "2026-04-24T09:58:58.965Z"
-  },
-  {
-    "id": "seed-11",
-    "title": "শিল্পকর্ম 11",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "আকাশ",
-    "image": "/images/FB_IMG_1777997742423.jpg",
-    "createdAt": "2026-04-25T09:58:58.965Z"
-  },
-  {
-    "id": "seed-12",
-    "title": "শিল্পকর্ম 12",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "বিমূর্ত",
-    "image": "/images/FB_IMG_1777997760839.jpg",
-    "createdAt": "2026-04-26T09:58:58.965Z"
-  },
-  {
-    "id": "seed-13",
-    "title": "শিল্পকর্ম 13",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "ল্যান্ডস্কেপ",
-    "image": "/images/FB_IMG_1777997763803.jpg",
-    "createdAt": "2026-04-27T09:58:58.965Z"
-  },
-  {
-    "id": "seed-14",
-    "title": "শিল্পকর্ম 14",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "প্রকৃতি",
-    "image": "/images/FB_IMG_1777997766357.jpg",
-    "createdAt": "2026-04-28T09:58:58.965Z"
-  },
-  {
-    "id": "seed-15",
-    "title": "শিল্পকর্ম 15",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "আকাশ",
-    "image": "/images/FB_IMG_1777997768696.jpg",
-    "createdAt": "2026-04-29T09:58:58.965Z"
-  },
-  {
-    "id": "seed-16",
-    "title": "শিল্পকর্ম 16",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "বিমূর্ত",
-    "image": "/images/FB_IMG_1777997770920.jpg",
-    "createdAt": "2026-04-30T09:58:58.965Z"
-  },
-  {
-    "id": "seed-17",
-    "title": "শিল্পকর্ম 17",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "ল্যান্ডস্কেপ",
-    "image": "/images/FB_IMG_1777997773042.jpg",
-    "createdAt": "2026-05-01T09:58:58.965Z"
-  },
-  {
-    "id": "seed-18",
-    "title": "শিল্পকর্ম 18",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "প্রকৃতি",
-    "image": "/images/FB_IMG_1777997775482.jpg",
-    "createdAt": "2026-05-02T09:58:58.965Z"
-  },
-  {
-    "id": "seed-19",
-    "title": "শিল্পকর্ম 19",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "আকাশ",
-    "image": "/images/FB_IMG_1777997778635.jpg",
-    "createdAt": "2026-05-03T09:58:58.965Z"
-  },
-  {
-    "id": "seed-20",
-    "title": "শিল্পকর্ম 20",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "বিমূর্ত",
-    "image": "/images/FB_IMG_1777997781157.jpg",
-    "createdAt": "2026-05-04T09:58:58.965Z"
-  },
-  {
-    "id": "seed-21",
-    "title": "শিল্পকর্ম 21",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "ল্যান্ডস্কেপ",
-    "image": "/images/FB_IMG_1777997784326.jpg",
-    "createdAt": "2026-05-05T09:58:58.965Z"
-  },
-  {
-    "id": "seed-22",
-    "title": "শিল্পকর্ম 22",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "প্রকৃতি",
-    "image": "/images/IMG_20260505_220439774_HDR.jpg",
-    "createdAt": "2026-05-06T09:58:58.965Z"
-  },
-  {
-    "id": "seed-23",
-    "title": "শিল্পকর্ম 23",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "আকাশ",
-    "image": "/images/IMG_20260505_220502735_HDR.jpg",
-    "createdAt": "2026-05-07T09:58:58.965Z"
-  },
-  {
-    "id": "seed-24",
-    "title": "শিল্পকর্ম 24",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "বিমূর্ত",
-    "image": "/images/IMG_20260505_220531832_HDR.jpg",
-    "createdAt": "2026-05-08T09:58:58.965Z"
-  },
-  {
-    "id": "seed-25",
-    "title": "শিল্পকর্ম 25",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "ল্যান্ডস্কেপ",
+    "id": "art-8",
+    "title": "Terra & Geological Strata",
+    "description": "Tactile exploration of natural stone formations and soil textures created with fine silica sand, raw pigment washes, and sculpted structural paste.",
+    "category": "Abstract & Relief",
     "image": "/images/IMG_20260505_220617389_HDR.jpg",
-    "createdAt": "2026-05-09T09:58:58.965Z"
-  },
-  {
-    "id": "seed-26",
-    "title": "শিল্পকর্ম 26",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "প্রকৃতি",
-    "image": "/images/IMG_20260505_220626489_HDR.jpg",
-    "createdAt": "2026-05-10T09:58:58.965Z"
-  },
-  {
-    "id": "seed-27",
-    "title": "শিল্পকর্ম 27",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "আকাশ",
-    "image": "/images/IMG_20260505_220645361_HDR.jpg",
-    "createdAt": "2026-05-11T09:58:58.965Z"
-  },
-  {
-    "id": "seed-28",
-    "title": "শিল্পকর্ম 28",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "বিমূর্ত",
-    "image": "/images/IMG_20260505_220707242_HDR.jpg",
-    "createdAt": "2026-05-12T09:58:58.965Z"
-  },
-  {
-    "id": "seed-29",
-    "title": "শিল্পকর্ম 29",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "ল্যান্ডস্কেপ",
-    "image": "/images/IMG_20260505_220748249_HDR.jpg",
-    "createdAt": "2026-05-13T09:58:58.965Z"
-  },
-  {
-    "id": "seed-30",
-    "title": "শিল্পকর্ম 30",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "প্রকৃতি",
-    "image": "/images/IMG_20260505_220819678_HDR.jpg",
-    "createdAt": "2026-05-14T09:58:58.965Z"
-  },
-  {
-    "id": "seed-31",
-    "title": "শিল্পকর্ম 31",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "আকাশ",
-    "image": "/images/IMG_20260505_220828177_HDR.jpg",
-    "createdAt": "2026-05-15T09:58:58.965Z"
-  },
-  {
-    "id": "seed-32",
-    "title": "শিল্পকর্ম 32",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "বিমূর্ত",
-    "image": "/images/IMG_20260505_220841204_HDR.jpg",
-    "createdAt": "2026-05-16T09:58:58.965Z"
-  },
-  {
-    "id": "seed-33",
-    "title": "শিল্পকর্ম 33",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "ল্যান্ডস্কেপ",
-    "image": "/images/IMG_20260505_220853608.jpg",
-    "createdAt": "2026-05-17T09:58:58.965Z"
-  },
-  {
-    "id": "seed-34",
-    "title": "শিল্পকর্ম 34",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "প্রকৃতি",
-    "image": "/images/IMG_20260505_220900549_HDR.jpg",
-    "createdAt": "2026-05-18T09:58:58.965Z"
-  },
-  {
-    "id": "seed-35",
-    "title": "শিল্পকর্ম 35",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "আকাশ",
-    "image": "/images/IMG_20260505_220911300_HDR.jpg",
-    "createdAt": "2026-05-19T09:58:58.965Z"
-  },
-  {
-    "id": "seed-36",
-    "title": "শিল্পকর্ম 36",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "বিমূর্ত",
-    "image": "/images/IMG_20260505_220923267_HDR.jpg",
-    "createdAt": "2026-05-20T09:58:58.965Z"
-  },
-  {
-    "id": "seed-37",
-    "title": "শিল্পকর্ম 37",
-    "description": "একটি চমৎকার ৩D টেক্সচার্ড পেইন্টিং শিল্পকর্ম। আবিদ হোসেইনের অনন্য সৃজনশীল কাজ।",
-    "category": "ল্যান্ডস্কেপ",
-    "image": "/images/IMG_20260505_220937329_HDR.jpg",
-    "createdAt": "2026-05-21T09:58:58.965Z"
+    "createdAt": "2026-04-23T09:58:58.965Z"
   }
 ]

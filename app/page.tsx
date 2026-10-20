@@ -1,23 +1,12 @@
-import Header from '@/components/Header'
-import Hero from '@/components/Hero'
-import Portfolio from '@/components/Portfolio'
-import About from '@/components/About'
-import Contact from '@/components/Contact'
-import Footer from '@/components/Footer'
-import { getArtworks } from '@/lib/artworks'
+import { getArtworks, Artwork } from '@/lib/artworks'
+import AcademicPortfolioClient from '@/components/AcademicPortfolioClient'
 
 export default async function Home() {
-  const artworks = await getArtworks()
+  const artworks: Artwork[] = await getArtworks()
 
   return (
-    <main className="min-h-screen bg-background">
-      <Header />
-      <Hero />
-      <Portfolio initialArtworks={artworks} />
-      <About />
-      <Contact />
-      <Footer />
+    <main className="min-h-screen bg-white text-[#222222]">
+      <AcademicPortfolioClient initialArtworks={artworks} />
     </main>
   )
 }
-
